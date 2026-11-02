@@ -1,0 +1,9 @@
+{
+  "name": "GLOU UP Training",
+  "short_name": "GLOU UP",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#080b09",
+  "theme_color": "#0a0d0b",
+  "description": "Tu registro personal de calistenia y coordinación."
+}

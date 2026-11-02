@@ -1,0 +1,18 @@
+GLOU UP — aplicación web instalable
+
+CONTENIDO
+- index.html: aplicación completa.
+- manifest.webmanifest: configuración instalable.
+- sw.js: caché básica para uso sin conexión después de la primera visita.
+
+CÓMO USAR EN ANDROID
+1. Publica estos archivos en un alojamiento HTTPS (por ejemplo, GitHub Pages).
+2. Abre la dirección HTTPS en Chrome en tu Samsung.
+3. Menú ⋮ > Añadir a pantalla de inicio o Instalar aplicación.
+4. Abre GLOU UP desde el icono.
+
+IMPORTANTE
+- Abrir index.html directamente como archivo permite probar la interfaz, pero la instalación PWA y el modo sin conexión requieren HTTPS.
+- El progreso se guarda en el almacenamiento local del navegador de ese dispositivo. No borres los datos del sitio si quieres conservarlo.
+- Exporta tu historial desde la pestaña Progreso como copia de seguridad.
+- La rutina es una plantilla general, no una autorización médica. Por las molestias de hombros, espalda y pie que describiste, sigue las indicaciones del profesional que te evaluó. No hagas movimientos dolorosos.

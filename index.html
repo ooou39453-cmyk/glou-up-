@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a0d0b">
+<meta name="description" content="GLOU UP — tu registro personal de calistenia y preparación física.">
+<link rel="manifest" href="manifest.webmanifest">
+<title>GLOU UP — Training</title>
+<style>
+:root{--bg:#080b09;--panel:#111713;--panel2:#172019;--line:#26352a;--green:#b7ff35;--muted:#9aa69c;--white:#f4f8f3;--red:#ff6868}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% -10%,#20351b 0,transparent 42%),var(--bg);color:var(--white);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+button{font:inherit;cursor:pointer} .wrap{max-width:760px;margin:auto;padding:18px 16px 100px}
+header{display:flex;justify-content:space-between;align-items:center;margin:8px 0 22px}.brand{font-weight:1000;letter-spacing:2px;font-size:22px}.brand span{color:var(--green)}.tag{font-size:10px;color:var(--green);border:1px solid #526e2c;padding:5px 8px;border-radius:99px;letter-spacing:1px}
+.hero{border:1px solid #35472e;border-radius:22px;padding:22px;background:linear-gradient(135deg,#172319,#0e130f 65%);position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:180px;height:180px;border:26px solid #b7ff3510;border-radius:50%;right:-55px;top:-65px}.eyebrow{color:var(--green);font-size:11px;font-weight:800;letter-spacing:1.6px}.hero h1{font-size:34px;line-height:1.02;margin:9px 0}.hero p{color:#bdc9be;max-width:420px;margin:10px 0 18px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:17px}.stat{background:#080d0a99;border:1px solid #30402f;border-radius:13px;padding:11px}.stat b{display:block;font-size:19px;color:var(--green)}.stat small{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.7px}
+.section{margin-top:24px}.sectionhead{display:flex;align-items:end;justify-content:space-between;margin-bottom:12px}.section h2{font-size:18px;margin:0}.muted{color:var(--muted);font-size:12px}.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.day{border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:11px;padding:10px 2px;font-size:11px}.day.active{background:var(--green);color:#10150b;border-color:var(--green);font-weight:900}.day.done{box-shadow:inset 0 -3px #77b51b}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:15px;margin:10px 0}.worktitle{display:flex;justify-content:space-between;gap:12px;align-items:start}.worktitle h3{margin:0;font-size:18px}.pill{font-size:10px;color:var(--green);border:1px solid #526e2c;border-radius:99px;padding:4px 8px;white-space:nowrap}
+.exercise{padding:13px 0;border-top:1px solid #26332a}.exercise:first-of-type{border-top:0}.exrow{display:flex;gap:12px;justify-content:space-between;align-items:center}.exrow b{font-size:14px}.dose{font-size:11px;color:var(--green);font-weight:800;white-space:nowrap}.how{font-size:12px;color:#aeb9b0;margin:6px 0 10px}.check{display:flex;gap:9px;align-items:center;color:#dce5dc;font-size:12px}.check input{accent-color:var(--green);width:18px;height:18px}
+.btn{border:0;border-radius:12px;background:var(--green);color:#10150b;font-weight:900;padding:13px 16px;width:100%;margin-top:10px}.btn:disabled{opacity:.35;cursor:not-allowed}.btn.secondary{background:#202b22;color:var(--white);border:1px solid var(--line)}.progress{height:8px;border-radius:99px;background:#283329;overflow:hidden;margin:10px 0}.progress span{display:block;height:100%;background:var(--green);width:0;transition:width .2s}
+.notice{border:1px solid #735a27;background:#211b0d;color:#e9d8a7;padding:13px;border-radius:14px;font-size:12px}.notice strong{color:#ffe28b}.history{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.hist{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:12px}.hist b{display:block;color:var(--green);font-size:20px}.hist small{color:var(--muted)}
+.tabs{position:fixed;bottom:0;left:0;right:0;background:#090d0bf2;backdrop-filter:blur(12px);border-top:1px solid var(--line);display:flex;justify-content:center;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));z-index:4}.tabs button{max-width:240px;flex:1;border:1px solid transparent;border-radius:10px;background:transparent;color:var(--muted);padding:9px;font-size:12px}.tabs button.active{color:var(--green);background:#1a251b;border-color:#33472a}
+.page{display:none}.page.active{display:block}.small{font-size:11px;color:var(--muted)}.empty{color:var(--muted);font-size:13px;padding:14px 0}.footer{text-align:center;color:#6f7b71;font-size:10px;margin-top:24px}
+@media(min-width:600px){.hero h1{font-size:42px}.wrap{padding-top:28px}.history{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div class="brand">GLOU<span>UP</span></div><div class="tag">TRAINING CLUB · 2026</div></header>
+<main id="homePage" class="page active">
+<section class="hero">
+<div class="eyebrow">TU PROCESO · TU RITMO</div><h1>ENTRENA<br>CON CABEZA.</h1>
+<p>Calistenia, coordinación y constancia. Registra lo que haces sin competir contra nadie.</p>
+<div class="stats"><div class="stat"><b id="streak">0</b><small>días marcados</small></div><div class="stat"><b id="weekCount">0/6</b><small>sesiones esta semana</small></div><div class="stat"><b>09 DIC</b><small>meta inicial</small></div></div>
+</section>
+<section class="section">
+<div class="sectionhead"><h2>Tu semana</h2><span class="muted">Elige un día</span></div>
+<div class="days" id="days"></div>
+</section>
+<section class="section">
+<div class="sectionhead"><h2 id="dayHeading">Entrenamiento de hoy</h2><span class="muted" id="dayType"></span></div>
+<div class="card">
+<div class="worktitle"><div><h3 id="planName"></h3><div class="muted" id="planSub"></div></div><span class="pill" id="planPill"></span></div>
+<div class="progress"><span id="bar"></span></div><div class="muted" id="progressText">0 de 0 ejercicios marcados</div>
+<div id="exerciseList"></div>
+<button class="btn" id="completeBtn" disabled>MARCAR SESIÓN COMPLETADA</button>
+<button class="btn secondary" id="resetBtn">Reiniciar marcas del día</button>
+</div>
+</section>
+<div class="notice"><strong>Primero, seguridad.</strong> Como has contado que a veces te duelen los hombros y la espalda y se te contrae el pie, no hagas ejercicios que provoquen dolor. Antes de retomar fuerza y boxeo, confirma con tu médico qué movimientos puedes hacer. Si aparece dolor, mareo, dolor de pecho o falta de aire inusual, detente y avisa a un adulto.</div>
+</main>
+<section id="historyPage" class="page">
+<section class="hero"><div class="eyebrow">TU CONSTANCIA</div><h1>PROGRESO<br>REAL.</h1><p>Este historial se guarda en este dispositivo usando almacenamiento local.</p></section>
+<section class="section"><h2>Resumen</h2><div class="history" style="margin-top:12px"><div class="hist"><b id="totalDone">0</b><small>sesiones completadas</small></div><div class="hist"><b id="totalChecks">0</b><small>ejercicios marcados</small></div><div class="hist"><b>38</b><small>días del reto</small></div><div class="hist"><b>RD$0</b><small>presupuesto</small></div></div></section>
+<section class="section"><h2>Sesiones guardadas</h2><div id="historyList" class="card"></div></section>
+<button class="btn secondary" id="exportBtn">DESCARGAR MI HISTORIAL (.JSON)</button>
+</section>
+<section id="guidePage" class="page">
+<section class="hero"><div class="eyebrow">GUÍA RÁPIDA</div><h1>HAZLO<br>BIEN.</h1><p>La técnica y la recuperación valen más que hacer muchas repeticiones.</p></section>
+<div class="card"><h3>Antes de entrenar</h3><p class="muted">Haz 5 minutos de calentamiento cómodo: marcha suave, movilidad sin dolor y movimientos fáciles. No uses el calentamiento para probar tu máximo.</p></div>
+<div class="card"><h3>Durante las series</h3><p class="muted">Descansa 60–90 segundos o más si lo necesitas. Termina cada serie sintiendo que podrías hacer algunas repeticiones más. No entrenes al fallo.</p></div>
+<div class="card"><h3>Alimentación y descanso</h3><p class="muted">Come suficiente de lo que haya en casa; no te saltes comidas ni hagas dietas restrictivas. A tu edad, intenta dormir 8–10 horas.</p></div>
+<div class="card"><h3>Cómo progresar</h3><p class="muted">Primero domina la técnica y completa las sesiones sin dolor. No aumentes repeticiones automáticamente por calendario. Si hay molestias, reduce o pausa y consulta al profesional que te atiende.</p></div>
+<div class="card"><h3>Boxeo</h3><p class="muted">La sección técnica es solo de coordinación suave, sin contacto, combate ni golpes potentes. Empieza cuando tu médico confirme que es adecuado.</p></div>
+</section>
+<div class="footer">GLOU UP · HECHO PARA TU PROCESO · NO ES UN DISPOSITIVO MÉDICO</div>
+</div>
+<nav class="tabs"><button class="active" data-page="homePage">⌂ &nbsp; HOY</button><button data-page="historyPage">▥ &nbsp; PROGRESO</button><button data-page="guidePage">◈ &nbsp; GUÍA</button></nav>
+<script>
+const plans={
+0:{name:"Pecho, hombros y abdomen",type:"FUERZA · 20–25 MIN",sub:"Lunes · solo si los movimientos son indoloros",items:[["Flexiones inclinadas","2 × 8","Manos en una superficie firme y estable; cuerpo alineado. No las hagas si molestan los hombros."],["Sentadillas","2 × 12","Pies apoyados; baja con control hasta donde resulte cómodo."],["Dead bug","2 × 8 por lado","Boca arriba, mueve brazo y pierna contrarios sin arquear la espalda."],["Plancha","2 × 15 s","Mantén el cuerpo alineado y respira. Omite si molesta la espalda."]]},
+1:{name:"Piernas y espalda",type:"FUERZA · 20–25 MIN",sub:"Martes · control antes que velocidad",items:[["Sentadillas","2 × 12","Baja con control y mantén los pies apoyados."],["Puente de glúteos","2 × 12","Boca arriba, eleva la cadera sin arquear la espalda."],["Bird dog","2 × 8 por lado","En cuatro apoyos, extiende brazo y pierna contrarios suavemente."],["Elevaciones de pantorrillas","2 × 12","Sube y baja lentamente; omite si provoca contracción o dolor en el pie."]]},
+2:{name:"Coordinación y movilidad",type:"TÉCNICA SUAVE · 10 MIN",sub:"Miércoles · sin contacto ni potencia",items:[["Guardia cómoda","2 × 20 s","Postura equilibrada, manos relajadas. Solo si hombros cómodos."],["Pasos cortos","2 × 30 s","Avanza y retrocede sin cruzar los pies."],["Pasos laterales","2 × 30 s","Desplázate con pasos pequeños y equilibrados."],["Movilidad suave","2 × 30 s","Mueve hombros y caderas dentro de un rango cómodo."]]},
+3:{name:"Pecho, hombros y abdomen",type:"FUERZA · 20–25 MIN",sub:"Jueves · no repitas máximos",items:[["Flexiones inclinadas","2 × 8","Solo si no causan dolor; manos sobre apoyo firme."],["Sentadillas","2 × 12","Controla la bajada y mantén el equilibrio."],["Dead bug","2 × 8 por lado","Espalda cómoda y respiración continua."],["Bird dog","2 × 8 por lado","Evita girar la pelvis o forzar la espalda."]]},
+4:{name:"Piernas y espalda",type:"FUERZA · 20–25 MIN",sub:"Viernes · esfuerzo moderado",items:[["Sentadillas","2 × 12","Movimiento cómodo y controlado."],["Puente de glúteos","2 × 12","Eleva la cadera sin dolor."],["Bird dog","2 × 8 por lado","Extiende lentamente brazo y pierna contrarios."],["Elevaciones de pantorrillas","2 × 12","Solo si el pie está bien; sin rebotes."]]},
+5:{name:"Coordinación",type:"TÉCNICA SUAVE · 10 MIN",sub:"Sábado · sin combate",items:[["Guardia cómoda","2 × 20 s","Mantén equilibrio y hombros relajados."],["Pasos adelante y atrás","2 × 30 s","Pasos cortos, sin cruzar los pies."],["Desplazamientos laterales","2 × 30 s","Muévete con control."],["Movilidad suave","2 × 30 s","Termina con movimientos cómodos."]]},
+6:{name:"Descanso",type:"RECUPERACIÓN",sub:"Domingo · recuperar también es entrenar",items:[["Descanso","A tu ritmo","No necesitas entrenar hoy. Si quieres caminar, que sea suave y sin molestias."],["Revisión semanal","2 min","Anota qué te sentó bien y qué movimiento te causó molestias."]]}
+};
+const dayNames=["LUN","MAR","MIÉ","JUE","VIE","SÁB","DOM"];
+const today=new Date(); let selected=(today.getDay()+6)%7;
+let state=JSON.parse(localStorage.getItem("glouup_v1")||'{"checks":{},"completed":{}}');
+const save=()=>localStorage.setItem("glouup_v1",JSON.stringify(state));
+const dateKey=(d=selected)=>{let x=new Date();let monday=new Date(x);monday.setDate(x.getDate()-((x.getDay()+6)%7)+d);return monday.toISOString().slice(0,10)};
+function renderDays(){document.getElementById("days").innerHTML=dayNames.map((n,i)=>`<button class="day ${i===selected?'active':''} ${state.completed[dateKey(i)]?'done':''}" data-day="${i}">${n}${state.completed[dateKey(i)]?' ✓':''}</button>`).join("");document.querySelectorAll("[data-day]").forEach(b=>b.onclick=()=>{selected=+b.dataset.day;render()})}
+function renderPlan(){let p=plans[selected],key=dateKey();document.getElementById("dayHeading").textContent=selected===((today.getDay()+6)%7)?"Entrenamiento de hoy":"Plan del día";document.getElementById("dayType").textContent=p.type;document.getElementById("planName").textContent=p.name;document.getElementById("planSub").textContent=p.sub;document.getElementById("planPill").textContent=p.type.split("·")[0].trim();let checks=state.checks[key]||[];document.getElementById("exerciseList").innerHTML=p.items.map((it,i)=>`<div class="exercise"><div class="exrow"><b>${i+1}. ${it[0]}</b><span class="dose">${it[1]}</span></div><div class="how">${it[2]}</div><label class="check"><input type="checkbox" data-check="${i}" ${checks.includes(i)?'checked':''}> Ya lo hice</label></div>`).join("");document.querySelectorAll("[data-check]").forEach(c=>c.onchange=()=>{let a=state.checks[key]||[];state.checks[key]=c.checked?[...new Set([...a,+c.dataset.check])]:a.filter(x=>x!==+c.dataset.check);save();render()});let n=checks.length;document.getElementById("bar").style.width=(n/p.items.length*100)+"%";document.getElementById("progressText").textContent=`${n} de ${p.items.length} ejercicios marcados`;let btn=document.getElementById("completeBtn");btn.disabled=n!==p.items.length||!!state.completed[key];btn.textContent=state.completed[key]?"SESIÓN GUARDADA ✓":"MARCAR SESIÓN COMPLETADA";btn.onclick=()=>{state.completed[key]=new Date().toISOString();save();render()};document.getElementById("resetBtn").onclick=()=>{if(confirm("¿Borrar las marcas de este día?")){delete state.checks[key];delete state.completed[key];save();render()}}}
+function renderHistory(){let entries=Object.entries(state.completed).sort((a,b)=>b[0].localeCompare(a[0]));document.getElementById("totalDone").textContent=entries.length;document.getElementById("totalChecks").textContent=Object.values(state.checks).reduce((s,a)=>s+a.length,0);document.getElementById("historyList").innerHTML=entries.length?entries.map(([d])=>`<div class="exercise"><b>${d}</b><div class="muted">Sesión completada ✓</div></div>`).join(""):'<div class="empty">Todavía no hay sesiones guardadas. ¡Tu primer registro aparecerá aquí!</div>';let now=new Date(),m=new Date(now);m.setDate(now.getDate()-((now.getDay()+6)%7));let count=entries.filter(([d])=>d>=m.toISOString().slice(0,10)).length;document.getElementById("weekCount").textContent=count+"/6";document.getElementById("streak").textContent=entries.length}
+function render(){renderDays();renderPlan();renderHistory()}
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tabs button").forEach(x=>x.classList.toggle("active",x===b));document.querySelectorAll(".page").forEach(x=>x.classList.toggle("active",x.id===b.dataset.page))});
+document.getElementById("exportBtn").onclick=()=>{let blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="glou-up-historial.json";a.click();URL.revokeObjectURL(a.href)};
+if("serviceWorker" in navigator && location.protocol.startsWith("http"))navigator.serviceWorker.register("./sw.js").catch(()=>{});
+render();
+</script>
+</body></html>
